@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/select2/select2.min.js"></script>
+    <script src="js/select2/zh-TW.js"></script>
+    <link rel="stylesheet" href="js/select2/select2.min.css">
+    <link rel="stylesheet" href="css/font/flaticon.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/signUp.css">
+    <title>MiTRADE登入</title>
+</head>
+<body>
+    <header></header>
+    <div id="main">
+       <div class="content">
+            <div class="title">手機號碼</div>
+            <form action="">
+                <div class="flex">
+                    <select id="country">
+                        <option value="taiwan" selected>+886</option>
+                        <option value="china">+86</option>
+                    </select> 
+                    <input type="tel" placeholder="手機號碼">
+                </div>
+                <div class="flex">
+                    <input type="text" placeholder="登入密碼">
+                </div>
+                <div class="flex forget">
+                    <a href="">忘記密碼?</a>
+                </div>
+                <input type="submit" value="安全登錄" class="submit">
+                <div class="info login"><p>沒有帳戶？</p> <a href="signUp.html">註冊</a></div>
+            </form>
+       </div>
+    </div>
+    <div class="footer"></div>
+    <footer></footer>
+<script>
+$("#country").select2({
+	templateResult: function (idioma) {
+  	var $span = $("<span><img src='img/" + idioma.id + ".png'/> " + idioma.text + "</span>");
+  	return $span;
+  },
+	templateSelection: function (idioma) {
+  	var $span = $("<span><img src='img/" + idioma.id + ".png'/> " + idioma.text + "</span>");
+  	return $span;
+  }
+});    
+</script>
+</body>
+</html>

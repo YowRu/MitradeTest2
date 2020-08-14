@@ -1,0 +1,42 @@
+<div class="top">
+    <p id="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </p>
+    <a href="index.html" title="首頁"><h1 class="logo"></h1></a>
+    <a href=""><img src="img/icon/custmerService1.png" alt="" class="service"></a>
+    <div id="Mnav">
+      <div class="wp">
+           <div class="logo_m"></div>
+<!--           <div class="phone">+886 09******51</div>-->
+          <div class="phone"></div>
+           <ul>
+               <li><a href="signUp.html">登錄</a></li>
+               <li><img src="img/header/1.png" alt=""><a href=" ">關於我們</a></li>
+               <li><img src="img/header/2.png" alt=""><a href=" ">聯繫客服</a></li>
+               <li><img src="img/header/3.png" alt=""><a href=" ">選擇語言</a></li>
+               <li><img src="img/header/4.png" alt=""><a href=" ">意見反饋</a></li>
+               <li><img src="img/header/5.png" alt=""><a href=" ">設置</a></li>
+           </ul>
+           <p>請參考我們的<a href="" style="color:#3782ff;">產品披露聲明</a>，僅一般建議，交易有風險</p>
+       </div>
+    </div>
+</div>
+<script>
+$(document).ready(function(){
+let $W=$(window).width();
+let $H=$(window).height();
+
+    $('#menu').click(function(){
+        $('header #Mnav').fadeToggle(800);
+        $("body").toggleClass('menuOpen');
+        $('footer').toggleClass('zIndex');
+    });
+    
+    if($('.phone').text() !== ''){
+        $('.top #Mnav .wp .logo_m').addClass('hasLogin');
+        $('.top #Mnav .wp ul li a:nth-child(1)').text('登出');
+    }
+});
+</script>
