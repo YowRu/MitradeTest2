@@ -10,17 +10,9 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/mine.css">
+    <link rel="stylesheet" href="css/camera.css">
     <title>MiTRADE 證件</title>
 </head>
-<style>
-    .header .top a.back {
-        color: #999;
-    }
-    
-    .header .top a img {
-        opacity: 0
-    }
-</style>
 
 <body>
     <div class="header">
@@ -30,8 +22,19 @@
         </div>
     </div>
     <div id="main">
-        <input type="file" accept="image/*" capture="camcorder">
-        <input type="file" accept="image/*"> </div>
+        <div class="idWP"><img src="img/343486.png" alt="" class="id"></div>
+        <p class="description">將證件擺放於方框內</p>
+        <div class="flex">
+            <div class="imgWP">
+                <div class="img"> <img src="img/icon/image.png" alt="">
+                    <input type="file" accept="image/*"> </div>
+            </div>
+            <div class="cameraWP">
+                <div class="camera"> <img src="img/icon/camera.png" alt="">
+                    <input type="file" accept="image/*" capture="camcorder"> </div>
+            </div>
+        </div>
+    </div>
     <footer></footer>
 </body>
 
