@@ -1,0 +1,2 @@
+#main form .row .flex p{padding:0 10px;}
+#main form .row:nth-child(1) .flex p:after{content: ' > ';color: #999;margin-left:10px;}

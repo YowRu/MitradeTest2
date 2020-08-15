@@ -1,0 +1,48 @@
+.header .top a.back {
+        color: #999;
+    }    
+.header .top a img {
+    opacity: 0;
+}
+    #main{padding-top: 60px;box-sizing: border-box;}
+    #main form{max-width: 600px;margin:0 auto;}
+    #main form .row{display: flex;flex-direction: column;padding: 0;}
+    #main form .row:nth-child(1){margin-bottom: 64px;}
+    #main form .row label{font-size:18px;color: #444;margin-bottom:30px;}
+    #main form .row input{font-size:20px;padding:10px;}
+    #main form .row .flex{border:1px solid #bbb;display: flex;justify-content: flex-start;align-items: center;}
+    #main form .row .flex input{border:0;width:74%;}
+    #main form .row .flex .comfirm{color:#5897fb;width:100px;cursor: pointer;}
+    #main form .row .flex .comfirm:before{content:' | ';color:#888;margin-right:10px;}
+    #main .btn{display:block; width:100%;height:88px;margin:100px auto 0;background-color:#5897fb;color:#fff;border:0;font-size:30px;
+    opacity: 0.5;font-weight: 200;-webkit-appearance: none;-moz-appearance: none;appearance: none;}
+    
+   @media(max-width:700px){
+       #main{padding-top: 50px;}
+       #main form{width: 500px;}
+       #main form .row:nth-child(1){margin-bottom: 50px;}
+       #main form .row label{margin-bottom:25px;font-size:16px;}
+       #main form .row input,#main form .row .flex .comfirm{font-size:18px;}
+       #main .btn{height:70px;margin:80px auto 0;font-size:26px;}
+    }
+    @media(max-width:555px){
+        #main{padding-top: 40px;}
+        #main form{width:400px;} 
+        #main form .row .flex input{width: auto;}
+        #main form .row input,#main form .row .flex .comfirm{font-size:16px;}
+        #main form .row label{margin-bottom:20px;font-size:15px;}
+        #main form .row:nth-child(1){margin-bottom: 40px;}
+        #main .btn{height:64px;margin:70px auto 0;font-size:22px;}
+    }
+    @media(max-width:450px){
+        #main{padding-top: 30px;}
+        #main form{width:350px;} 
+    }
+    @media(max-width:375px){
+        #main form{width:300px;} 
+        #main form .row:nth-child(1){margin-bottom: 32px;}
+        #main form .row input,#main form .row .flex .comfirm{font-size:14px;}
+        #main form .row label{margin-bottom:19px;font-size:13px;}
+        #main form .row .flex input{width:170px;}
+        #main .btn{height:44px;margin:50px auto 0;font-size:18px;}
+    }
