@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/loading.js"></script>
+    <link rel="stylesheet" href="css/font/flaticon.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mine.css">
+    <link rel="stylesheet" href="css/email.css">
+    <link rel="stylesheet" href="css/phone.css">
+    <title>MiTRADE 手機綁定</title>
+</head>
+<body>
+    <div class="header">
+        <div class="top"> <a href="account.html" class="back"> → </a>
+            <p>手機號碼綁定</p>
+            <a href=""> <img src="img/icon/qa_line.png" alt=""> </a>
+        </div>
+    </div>
+    <div id="main">
+       <form action="">
+           <div class="row">
+               <label for="tel">請輸入您想綁定的手機號碼</label>
+               <div class="flex">
+                    <p>+886</p>
+                    <input type="tel" id="tel" autocomplete="off" placeholder="手機號碼" required class="content" pattern="\d*" maxlength='10' minlength='10'/>
+                </div>
+           </div>
+           <div class="row">
+               <label for="verification">請輸入手機收到的驗證碼</label>
+               <div class="flex">
+                    <input type="text" id="verification" autocomplete="off" placeholder="驗證碼" required class="content"/>
+                    <p class="comfirm">獲取驗證碼</p>
+                </div>
+           </div>
+           <input type="submit" value="提交" class="btn">
+       </form>
+    </div>
+    <footer></footer>
+    
+    <script>
+         $('form .content').change(function(){
+            $('form .content').each(function(){
+                if($(this).val()!== ''){
+                   $('#main .btn').css('opacity',1);
+                }else{
+                    $('#main .btn').css('opacity',0.5);
+                }
+            });  
+         });
+         
+             if($('form input[type="tel"]').val() !== '' && $('form input[type="text"]').val() !== ''){
+                 $('form input[type="submit"]').click(function(){
+                    self.location='verification.html'
+                 });
+             }
+             
+    </script>
+</body>
+</html>
